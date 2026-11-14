@@ -8,7 +8,6 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.plmungo.HomeActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loginUser() {
+
         val username = etUsername.text.toString().trim()
         val idNumber = etIdNumber.text.toString().trim()
 
@@ -58,9 +58,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (rbStudent.isChecked) {
-            if (username == "Juan Dela Cruz" &&
+
+            if (username.equals("Juan Dela Cruz", true) &&
                 idNumber == "2026001") {
+
                 openHomePage(username, "Student")
+
             } else {
                 Toast.makeText(
                     this,
@@ -70,9 +73,12 @@ class MainActivity : AppCompatActivity() {
             }
 
         } else if (rbAdmin.isChecked) {
-            if (username == "admin" &&
+
+            if (username.equals("admin", true) &&
                 idNumber == "ADMIN001") {
+
                 openHomePage(username, "Admin")
+
             } else {
                 Toast.makeText(
                     this,
@@ -88,8 +94,10 @@ class MainActivity : AppCompatActivity() {
         accountType: String
     ) {
         val intent = Intent(this, HomeActivity::class.java)
+
         intent.putExtra("USERNAME", username)
         intent.putExtra("ACCOUNT_TYPE", accountType)
+
         startActivity(intent)
         finish()
     }

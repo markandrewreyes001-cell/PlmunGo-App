@@ -22,31 +22,19 @@ class FloorPlanActivity : AppCompatActivity() {
         tvRooms = findViewById(R.id.tvRooms)
 
         btnGround.setOnClickListener {
-            showRooms(
-                "GROUND FLOOR",
-                "CCJ/CTE/CBA/CAS Faculty\nBusiness Center\nAssessment Office\nPlmun HDRMO\nRecords Office\nUniversity Office"
-            )
+            showRooms("GROUND FLOOR")
         }
 
         btnSecond.setOnClickListener {
-            showRooms(
-                "2ND FLOOR",
-                "Room 201 - Computer Lab\nRoom 203 - Computer Lab\nCITCS Faculty\nBAPOL AND BAPAD Faculty\nMultimedia And Laboratory Management Office\nSpeech Lab\nICT Office"
-            )
+            showRooms("2ND FLOOR")
         }
 
         btnThird.setOnClickListener {
-            showRooms(
-                "3RD FLOOR",
-                "Room 301\nRoom 302\nRoom 303\nRoom 304\nRoom 305\nRoom 306\nRoom 307\nRoom 308\nCAS Faculty\nCAS Dean's Office\nPsychology Laboratory\nPsychology Clinic\nRadio Room"
-            )
+            showRooms("3RD FLOOR")
         }
 
         btnFourth.setOnClickListener {
-            showRooms(
-                "4TH FLOOR",
-                "Room 401\nRoom 402\nRoom 403\nRoom 404\nRoom 405\nCTE Faculty\nPlmun AVR\nSatelite Library"
-            )
+            showRooms("4TH FLOOR")
         }
 
         btnBack.setOnClickListener {
@@ -54,7 +42,19 @@ class FloorPlanActivity : AppCompatActivity() {
         }
     }
 
-    private fun showRooms(floor: String, rooms: String) {
-        tvRooms.text = "$floor\n\n$rooms"
+    private fun showRooms(floor: String) {
+        val rooms = RoomStorage.getRooms(this)
+            .filter { it.floor == floor }
+
+        if (rooms.isEmpty()) {
+            tvRooms.text = "$floor\n\nNo rooms available."
+            return
+        }
+
+        val roomText = rooms.mapIndexed { index, room ->
+            "${index + 1}. ${room.name}"
+        }.joinToString("\n")
+
+        tvRooms.text = "$floor\n\n$roomText"
     }
 }

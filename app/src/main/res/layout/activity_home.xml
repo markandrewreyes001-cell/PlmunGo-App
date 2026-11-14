@@ -24,42 +24,42 @@
                 android:id="@+id/tvWelcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Welcome!"                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="25sp" />
+                android:text="Welcome!"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvGreeting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:text="Plmun Go"
+                android:text="PLMUN GO"
                 android:textColor="#FFFFFF"
                 android:textSize="27sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
 
-        <!-- QUICK ACCESS TITLE -->
+        <!-- QUICK ACCESS -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="Quick Access"
-            android:textColor="#FFFF"
+            android:textColor="#FFFFFF"
             android:textSize="21sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="explore the university"
-            android:textColor="#FFFF"
+            android:text="Explore the university"
+            android:textColor="#FFFFFF"
             android:textSize="13sp" />
 
         <!-- FIRST ROW -->
         <LinearLayout
-            style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -67,7 +67,6 @@
 
             <Button
                 android:id="@+id/btnFloorPlan"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="115dp"
                 android:layout_marginEnd="7dp"
@@ -80,7 +79,6 @@
 
             <Button
                 android:id="@+id/btnCampusMap"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="115dp"
                 android:layout_marginStart="7dp"
@@ -95,7 +93,6 @@
 
         <!-- SECOND ROW -->
         <LinearLayout
-            style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -103,26 +100,24 @@
 
             <Button
                 android:id="@+id/btnAbout"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="115dp"
                 android:layout_marginEnd="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_home_card"
-                android:text="About Plmun"
+                android:text="About PLMUN"
                 android:textAllCaps="false"
                 android:textColor="#173D78"
                 android:textSize="15sp" />
 
             <Button
                 android:id="@+id/btnProfile"
-                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="115dp"
                 android:layout_marginStart="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_home_card"
-                android:text="My_Profile"
+                android:text="My Profile"
                 android:textAllCaps="false"
                 android:textColor="#173D78"
                 android:textSize="15sp" />
@@ -143,7 +138,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="administrator_tools"
+                android:text="Administrator Tools"
                 android:textColor="#173D78"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -154,7 +149,7 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/bg_home_button"
-                android:text="manage_rooms"
+                android:text="Manage Rooms"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF" />
 
@@ -164,19 +159,19 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_home_button"
-                android:text="manage_announcements"
+                android:text="Manage Announcements"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF" />
 
         </LinearLayout>
 
-        <!-- ANNOUNCEMENTS -->
+        <!-- CAMPUS UPDATE -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="Campus Update"
-            android:textColor="#FFFF"
+            android:textColor="#FFFFFF"
             android:textSize="21sp"
             android:textStyle="bold" />
 
@@ -200,7 +195,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Stay updated withimportant university news and announcements"
+                android:text="Stay updated with important university news and announcements."
                 android:textColor="#7B8495"
                 android:textSize="14sp" />
 
